@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+    <PackageReference Include="Serilog.Sinks.MSSqlServer" Version="5.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+    <None Remove="Microsoft.Data.SqlClient" />
+    <None Remove="Microsoft.AspNet.Mvc" />
+    <None Remove="Microsoft.AspNetCore.Mvc" />
+    <None Remove="RestSharp" />
+    <None Remove="Microsoft.AspNet.WebApi" />
+    <None Remove="Humanizer.Core" />
+    <None Remove="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
+    <None Remove="bootstrap" />
+    <None Remove="System.IO.Packaging" />
+    <None Remove="Twilio" />
+    <None Remove="Bogus" />
+    <None Remove="SixLabors.ImageSharp" />
+    <None Remove="Microsoft.Extensions.Logging" />
+    <None Remove="Serilog" />
+    <None Remove="Serilog.AspNetCore" />
+    <None Remove="Serilog.Sinks.AzureTableStorage.NETStandard" />
+    <None Remove="Serilog.Sinks.AzureTableStorage" />
+    <None Remove="Serilog.Sinks.AzureDocumentDb" />
+    <None Remove="Serilog.Sinks.MSSqlServer" />
+    <None Remove="Serilog.Settings.Configuration" />
+    <None Remove="Swashbuckle.AspNetCore" />
+    <None Remove="Newtonsoft.Json" />
+  </ItemGroup>
+</Project>
