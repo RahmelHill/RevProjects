@@ -1,0 +1,123 @@
+
+   <!-- <h2>Clothing List</h2> -->
+    <!-- <select class="form-select input-border-width-sm" name="clothes" style="float: left;" id="clothes" (Onchange)= "userCategory('value')" >
+       
+        <option value="suit-top">Suit Top</option>
+        <option value="tank-tops">Tank Tops</option>
+      </select> -->
+
+
+<table border="1">
+  <td>
+    <button (click)="getAllJacketsAndCoats()"> Get Jackets/Coats </button>
+  </td>
+  <td>
+    <button (click)="getAllShirts()"> Get Shirts </button>
+  </td><td>
+    <!-- <button (click)="getAllShoes()"> Get Shoes </button>
+  </td><td> -->
+    <button (click)="getAllShorts()"> Get Shorts </button>
+  </td><td>
+    <button (click)="getAllSweats()"> Get Sweats </button>
+  </td><td>
+    <button (click)="getAllSandals()"> Get Sandals </button>
+  </td><td>
+    <button (click)="getAllBoots()"> Get Boots </button>
+  </td><td>
+    <button (click)="getAllSneakers()"> Get Sneakers </button>
+  </td><td>
+    <button (click)="getAllJeans()"> Get Jeans </button>
+  </td><td>
+    <button (click)="getAllFullPieceSuits()"> Get Full-Piece Suits </button>
+  </td><td>
+    <button (click)="getAllSuitBottoms()"> Get Suit Bottom </button>
+  </td>
+  <td>
+    <button (click)="getAllSuitTops()"> Get Suit Tops </button>
+  </td><td>
+    <button (click)="getAllTankTops()"> Get Tank Tops </button>
+  </td>
+</table>
+
+<hr/>
+
+<!-- <button (click)="getAllClothes()"> Get Clothes </button> -->
+
+
+<table border="2">
+  <tr>
+
+    <th> brand</th>
+
+    <th>style</th>
+    </tr>
+  <tr *ngFor="let c of clothesData">
+    <!-- the name of the json key of the key and value pair
+    will be invoked by a dot operator below -->
+    <td> {{c.brandName}}</td>
+    
+
+    <td> {{c.shortsBrand}}</td>
+    <td> {{c.jeanBrand}}</td>
+    <td> {{c.sweatsBrand}}</td>
+  
+
+ 
+  <td> {{c.sandalName}}</td>
+    <td> {{c.styleName}}</td>
+    <td> {{c.bootname}}</td>
+    <td> {{c.bootcondition}}</td>
+    <td> {{c.bootsize}}</td>
+    <td> {{c.shortsStyle}}</td>
+    <td> {{c.bootName}}</td>
+    <td> {{c.sweatsStyle}}</td>
+    <td> {{c.sneakerName}}</td>
+    <td> {{c.jeanStyle}}</td>
+
+
+
+
+
+ 
+
+
+
+
+
+  
+
+<!-- <p *ngFor = "let b of clothesData"> {{b.bootname}}</p> -->
+
+<!-- <table border="1">
+  <tr *ngFor="let c of clothesData">
+    the name of the json key of the key and value pair
+    will be invoked by a dot operator below 
+    <td> {{c.boots}}</td>
+    <td> {{c.bootname}}</td>
+    <td> {{c.bootcondition}}</td>
+    <td> {{c.bootsize}}</td>
+  </tr>
+</table> -->
+
+
+
+
+      <!-- <table>
+        <tr *ngFor="let c of clothesData">
+          <td> c.bootname</td>
+          <td> c.bootcondition</td>
+          <td> c.bootsize</td>
+          <td> c.size</td>
+        </tr>
+      </table> -->
+      <!-- <table>
+        <tr *ngFor="let c of clothesData">
+          <td> {{'placeholder information'}}</td>
+          <td> {{'placeholder information'}}</td>
+          <td> {{'placeholder information'}}</td>
+          <td> {{'placeholder information'}}</td>
+        </tr>
+      </table> -->
+
+      <!-- <button (click)="getAllClothes()"> click me!</button>
+<p *ngFor="let c of clothesData"> {{c.customerFirstName}} {{c.customerLastName}}</p> -->

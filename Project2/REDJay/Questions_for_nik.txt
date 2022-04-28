@@ -1,0 +1,44 @@
+QUESTIONS FOR NIK 
+
+SHOULD WE STORE IMAGES IN DATABASE 
+
+CAN WE SEARCH THROUGH MULTIPLE TABLES USING ANGULAR OR C# OR EF
+IF SO HOW TO DO IT 
+build UI first 
+ask nik later
+
+
+
+
+ASK FOR ADVICE ON USER TABLE FOR ADMIN AND OTHER FUCNTIONS
+3 tables 
+one for customers
+pk
+FK for username 
+general
+
+
+one for username 
+PK
+FK for passwords
+Fk customer_ID
+IF admin
+
+one for passwords
+PK 
+pass
+
+
+
+for pending approval 
+trail and error
+drop if failed to implement 
+
+
+connect table with join 
+
+MAKE ENTITY FRAME WORK!!
+
+HOW SHOULD WE SET UP OUR LOGIN TABLES
+
+HELP US SET UP OUR AZURE DATABASE 

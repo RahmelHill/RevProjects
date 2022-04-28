@@ -1,0 +1,181 @@
+<home page component> 
+
+
+ //post
+addboots(form:any)
+{
+  form["InStock"] =true
+
+this._clothes.SendBoots(form);
+ //console.log(form)
+
+
+
+}
+
+//get
+getAllUsersBoot()
+{
+this._clothes.getUserBoots().subscribe((result) => { 
+  this.customersData = result
+  console.log(result)
+});
+
+}
+
+//put
+editUserBoot(bootid:any) 
+{
+
+console.log(bootid)
+
+this._clothes.approveUserBoot(bootid).subscribe((result)=> {
+  console.log(result)
+});
+}
+
+
+==========================================================================================================================================================================
+==========================================================================================================================================================================
+
+cloths service ts
+
+
+
+  // adding a new user boot
+SendBoots(form:any) 
+{
+
+     this._http
+     this._http.post<any>('https://localhost:7041/api/UserInventory/Add_Boots',form,{headers:new HttpHeaders({'Content-Type':'application/json'})}).subscribe( {
+       next:result=>{
+       this.importData = result;
+     
+     } ,
+     error: error => {
+       this.errorMessage = error.message;
+       if (error.status == 201){
+         console.log("youre good")
+       }
+       else
+       console.error('There was an error!', error );
+     } ,
+   });
+
+     if (this.importData != null)
+     {
+       console.log(this.importData)
+       console.log("success")
+     }
+     }
+
+
+  
+
+
+
+  //approve user boot
+  approveUserBoot(id:any)
+  {
+    return(this._http.put("https://localhost:7041/api/AdminApproval/Approve_Boots/"+id,null))
+  }
+
+  //get all user boots
+  getUserBoots()
+  {
+
+    return(this._http.get('https://localhost:7041/api/UserInventory/GetBoots'))
+  }
+
+
+==========================================================================================================================================================================
+==========================================================================================================================================================================
+==========================================================================================================================================================================
+
+
+
+WHAT WE NEED FOR REST API
+
+
+
+FOR ALL POSTS  IN USER INVENTORY
+
+
+ [HttpPost]
+        [Route("Add_Boots")] //bootsytle is bootname
+        public IActionResult MakeUserBoot(UserBoot new2boot)
+        {
+            UserBoot newBoot = new UserBoot() { UploadStyle = new2boot.UploadStyle, UploadBrand = new2boot.UploadBrand, InStock = new2boot.InStock, UploadSize = new2boot.UploadSize, UploadCondition = new2boot.UploadCondition};
+            if (newBoot != null)
+            {
+                Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry<UserBoot> entityEntry = dbREDJay.UserBoots.Add(newBoot);
+                dbREDJay.SaveChanges();
+                return Created("", "Boot added Successfully");
+            }
+            else
+                return BadRequest("Boot not added successfully");
+        }
+
+
+
+
+
+
+
+    [HttpGet]
+            [Route ("GetUserBoots")]
+            public IActionResult getUserBoots()
+        {
+
+            var allboot = from j in dbREDJay.UserBoots
+                         select j;
+            return Ok(allboot);
+
+        }
+
+
+
+=================================================================================================================================================================================
+==========================================================================================================================================================================
+==========================================================================================================================================================================
+
+
+ FOR ADMIN APPROVAL 
+
+
+    [HttpPut]
+        [Route("Approve_Boots/{changes:int}")]
+        public IActionResult EditBoots(int changes)
+        {
+
+            var editboots = (from c in dbREDJay.UserBoots
+                                     where c.PkBootsId == changes
+                                     select c).SingleOrDefault();
+            if (editboots != null)
+            {
+                editboots.AdminApproval = true;
+                dbREDJay.SaveChanges();
+               
+                       return Ok("Boots have been approved");
+                
+            }
+            else
+            {
+                return BadRequest("Boots have not approved");
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

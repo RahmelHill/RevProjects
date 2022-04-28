@@ -1,0 +1,31 @@
+h2 {
+    background-color: bisque;
+}
+
+#thebar{
+    float: right;
+}
+
+form {
+    margin-left: 450px ;
+}
+
+button {
+    float: right ;
+}
+
+
+
+/* 
+.container {
+    display: inline-block;
+} */
+/* 
+input.form-control {
+    width: 150px;
+    display: block;
+}
+
+.right {
+    float: right;
+}  */

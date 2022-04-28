@@ -1,0 +1,378 @@
+<div class="header">
+    <img src="assets/pics/Redjay_Logo3.png" alt="logo"  />
+    <h1>REDJay</h1>
+</div>
+<hr/>
+<h1> Home </h1>
+
+<app-nav-bar></app-nav-bar> 
+
+
+<h1> User uploads</h1>>
+
+<!-- <button (click)="getAllBoots()"> click me!</button>
+<p *ngFor="let c of customersData"> {{c.customerFirstName}} {{c.customerLastName}}</p> -->
+
+<body>
+
+
+<form id  = "addstuff" #AddForm = "ngForm" (ngSubmit) = "addboots(AddForm.value)">
+
+
+    <input type="text" name = "UploadStyle" ngModel placeholder="Boot Style" />
+    <input type="text" name = "UploadBrand" ngModel placeholder="Boot Brand" />
+
+<select name = "UploadSize"  ngModel> 
+    <option value="1"> 10.5 men / 12 Women</option>
+    <option value="2"> 10 men / 11.5Women</option>
+    <option value="3"> 9.5 men / 11 Women</option>
+    <option value="4"> 9 men / 10.5 Women</option>
+    <option value="5"> 8.5 men / 10 Women</option>
+</select>
+<select name = "UploadCondition"  ngModel> 
+    <option value="1"> New</option>
+    <option value="2"> Good</option>
+    <option value="3"> Fair</option>
+    <option value="4"> Recyclable</option>
+    
+</select>
+
+<button type="submit"> Add Boot</button>
+</form> 
+<button id = "approve1" (click)="getAllUsersBoot()"> Get pending Boots</button>
+<div *ngFor="let b of customersData"> {{b.uploadStyle}} {{b.uploadBrand}}
+    <button id= "approve1" (click) = "editUserBoot(b.pkBootsId)" >Approve</button>
+</div>
+
+
+<hr/>
+<form id  = "addstuff" #AddForm1 = "ngForm" (ngSubmit) = "addsneaker(AddForm1.value)">
+
+
+    <input type="text" name = "UploadStyle" ngModel placeholder="sneaker style" />
+    <input type="text" name = "UploadBrand" ngModel placeholder="Sneaker Brand" />
+
+<select name = "UploadSize"  ngModel> 
+    <option value="1"> 10.5 men / 12 Women</option>
+    <option value="2"> 10 men / 11.5Women</option>
+    <option value="3"> 9.5 men / 11 Women</option>
+    <option value="4"> 9 men / 10.5 Women</option>
+    <option value="5"> 8.5 men / 10 Women</option>
+</select>
+<select name = "UploadCondition"  ngModel> 
+    <option value="1"> New</option>
+    <option value="2"> Good</option>
+    <option value="3"> Fair</option>
+    <option value="4"> Recyclable</option>
+    
+</select>
+
+<button type="submit"> Add Sneaker</button>
+</form> 
+<button id = "approve2" (click)="getAllUserSneaker()"> Get pending Sneakers</button>
+<div *ngFor="let b of customersData1"> {{b.uploadStyle}} {{b.uploadBrand}} 
+    <button id= "approve2" (click) = "editUserSneakers(b.pkSneakerId)" >Approve</button>
+</div>
+
+
+
+<hr/>
+<form id  = "addstuff" #AddForm2 = "ngForm" (ngSubmit) = "addFullPiece(AddForm2.value)">
+
+
+    <input type="text" name = "UploadStyle" ngModel placeholder="Full Piece SuitStyle" />
+    <input type="text" name = "UploadBrand" ngModel placeholder="Full Piece SuitBrand" />
+
+<select name = "UploadSize"  ngModel> 
+    <option value="1"> Small </option>
+    <option value="2"> Medium </option>
+    <option value="3"> Large </option>
+  
+</select>
+<select name = "UploadCondition"  ngModel> 
+    <option value="1"> New</option>
+    <option value="2"> Good</option>
+    <option value="3"> Fair</option>
+    <option value="4"> Recyclable</option>
+    
+</select>
+
+<button type="submit"> Add Full Piece Suit</button>
+</form> 
+
+
+<button id = "approve" (click)="getAllUserFullPieceSuit()"> Get pending Full Piece Suit</button>
+<div *ngFor="let b of customersData2"> {{b.uploadStyle}} {{b.uploadBrand}}
+
+<button id= "approve" (click) = "editserFullPieceSuit(b.pkFullSuit)" >Approve</button>
+
+</div>
+
+
+<hr/>
+<form id  = "addstuff" #AddForm3 = "ngForm" (ngSubmit) = "addJacket(AddForm3.value)">
+
+
+    <input type="text" name = "UploadStyle" ngModel placeholder="Jacket Style" />
+    <input type="text" name = "UploadBrand" ngModel placeholder="Jacket Brand" />
+
+<select name = "UploadSize"  ngModel> 
+    <option value="1"> Small </option>
+    <option value="2"> Medium </option>
+    <option value="3"> Large </option>
+</select>
+<select name = "UploadCondition"  ngModel> 
+    <option value="1"> New</option>
+    <option value="2"> Good</option>
+    <option value="3"> Fair</option>
+    <option value="4"> Recyclable</option>
+    
+</select>
+
+<button type="submit"> Add Jacket/Coat</button>
+</form> 
+
+
+<button id = "approve" (click)="getAllUserJacketsCoat()"> Get pending JacketsCoat</button>
+<div *ngFor="let b of customersData3"> {{b.uploadStyle}} {{b.uploadBrand}}
+
+<button id= "approve" (click) = "editUserJacketsCoat(b.pkJacketCoatId)" >Approve</button>
+
+</div>
+
+
+<hr/>
+<form id  = "addstuff" #AddForm4 = "ngForm" (ngSubmit) = "addsweats(AddForm4.value)">
+
+
+    <input type="text" name = "UploadStyle" ngModel placeholder="Sweats Style" />
+    <input type="text" name = "UploadBrand" ngModel placeholder="Sweats Brand" />
+
+<select name = "UploadSize"  ngModel> 
+    <option value="1"> Small </option>
+    <option value="2"> Medium </option>
+    <option value="3"> Large </option>
+</select>
+<select name = "UploadCondition"  ngModel> 
+    <option value="1"> New</option>
+    <option value="2"> Good</option>
+    <option value="3"> Fair</option>
+    <option value="4"> Recyclable</option>
+    
+</select>
+
+<button type="submit"> Add Sweats</button>
+</form> 
+
+
+<button id = "approve" (click)="getAllUserSweats()"> Get pending Sweats</button>
+<div *ngFor="let b of customersData4"> {{b.uploadStyle}} {{b.uploadBrand}}
+
+<button id= "approve" (click) = "editUserSweats(b.pkSweatsId)" >Approve</button>
+
+</div>
+
+
+
+<hr/>
+<form id  = "addstuff" #AddForm5 = "ngForm" (ngSubmit) = "addjeans(AddForm5.value)">
+
+
+    <input type="text" name = "UploadStyle" ngModel placeholder="Jeans Style" />
+    <input type="text" name = "UploadBrand" ngModel placeholder="Jeans Brand" />
+
+<select name = "UploadSize"  ngModel> 
+    <option value="1"> Small </option>
+    <option value="2"> Medium </option>
+    <option value="3"> Large </option>
+</select>
+<select name = "UploadCondition"  ngModel> 
+    <option value="1"> New</option>
+    <option value="2"> Good</option>
+    <option value="3"> Fair</option>
+    <option value="4"> Recyclable</option>
+    
+</select>
+
+<button type="submit"> Add Jeans</button>
+</form> 
+<button id = "approve" (click)="getAllUserJean()"> Get pending Jeans</button>
+<div *ngFor="let b of customersData5"> {{b.uploadStyle}} {{b.uploadBrand}}
+    <button id= "approve" (click) = "editUserJeans(b.pkJeansId)" >Approve</button>
+</div>
+
+
+<hr/>
+<form id  = "addstuff" #AddForm6 = "ngForm" (ngSubmit) = "addSandals(AddForm6.value)">
+
+
+    <input type="text" name = "UploadStyle" ngModel placeholder="Sandals Style" />
+    <input type="text" name = "UploadBrand" ngModel placeholder="Sandals Brand" />
+
+<select name = "UploadSize"  ngModel> 
+    <option value="1"> Small </option>
+    <option value="2"> Medium </option>
+    <option value="3"> Large </option>
+</select>
+<select name = "UploadCondition"  ngModel> 
+    <option value="1"> New</option>
+    <option value="2"> Good</option>
+    <option value="3"> Fair</option>
+    <option value="4"> Recyclable</option>
+    
+</select>
+
+<button type="submit"> Add Sandals</button>
+</form> 
+<button id = "approve" (click)="getAllUserSandals()"> Get pending Sandals</button>
+<div *ngFor="let b of customersData6"> {{b.uploadStyle}} {{b.uploadBrand}}
+
+    <button id= "approve" (click) = "editUserSandals(b.pkSandalsId)" >Approve</button>
+</div>
+<hr/>
+<form id  = "addstuff" #AddForm7 = "ngForm" (ngSubmit) = "addShirts(AddForm7.value)">
+
+
+    <input type="text" name = "UploadStyle" ngModel placeholder="Shirts Style" />
+    <input type="text" name = "UploadBrand" ngModel placeholder="Shirts Brand" />
+
+<select name = "UploadSize"  ngModel> 
+    <option value="1"> 10.5 men / 12 Women</option>
+    <option value="2"> 10 men / 11.5Women</option>
+    <option value="3"> 9.5 men / 11 Women</option>
+    <option value="4"> 9 men / 10.5 Women</option>
+    <option value="5"> 8.5 men / 10 Women</option>
+</select>
+<select name = "UploadCondition"  ngModel> 
+    <option value="1"> New</option>
+    <option value="2"> Good</option>
+    <option value="3"> Fair</option>
+    <option value="4"> Recyclable</option>
+    
+</select>
+
+<button type="submit"> Add Shirts</button>
+</form> 
+<button id = "approve" (click)="getAllUserShirts()"> Get pending Shirt</button>
+<div *ngFor="let b of customersData7"> {{b.uploadStyle}} {{b.uploadBrand}}
+    <button id= "approve" (click) = "editUserShirts(b.pkShirtId)" >Approve</button>
+</div>
+
+
+<hr/>
+<form id  = "addstuff" #AddForm8 = "ngForm" (ngSubmit) = "addSuitTop(AddForm8.value)">
+
+
+    <input type="text" name = "UploadStyle" ngModel placeholder="Suit Top Style" />
+    <input type="text" name = "UploadBrand" ngModel placeholder="Suit Top Brand" />
+
+<select name = "UploadSize"  ngModel> 
+    <option value="1"> Small </option>
+    <option value="2"> Medium </option>
+    <option value="3"> Large </option>
+</select>
+<select name = "UploadCondition"  ngModel> 
+    <option value="1"> New</option>
+    <option value="2"> Good</option>
+    <option value="3"> Fair</option>
+    <option value="4"> Recyclable</option>
+    
+</select>
+
+<button type="submit"> Add Suit Top</button>
+</form> 
+<button id = "approve" (click)="getAllUserSuitTop()"> Get pending Suit Top</button>
+<div *ngFor="let b of customersData8"> {{b.uploadStyle}} {{b.uploadBrand}}
+    <button id= "approve" (click) = "editUserSuitTop(b.pkSuitTop)" >Approve</button>
+</div>
+<hr/>
+<form id  = "addstuff" #AddForm9 = "ngForm" (ngSubmit) = "addSuitBottom(AddForm9.value)">
+
+
+    <input type="text" name = "UploadStyle" ngModel placeholder="Suit Bottom Style" />
+    <input type="text" name = "UploadBrand" ngModel placeholder="Suit Bottom Brand" />
+
+<select name = "UploadSize"  ngModel> 
+    <option value="1"> Small </option>
+    <option value="2"> Medium </option>
+    <option value="3"> Large </option>
+</select>
+<select name = "UploadCondition"  ngModel> 
+    <option value="1"> New</option>
+    <option value="2"> Good</option>
+    <option value="3"> Fair</option>
+    <option value="4"> Recyclable</option>
+    
+</select>
+
+<button type="submit"> Add Suit Bottom</button>
+</form> 
+<button id = "approve" (click)="getAllUserSuitBottom()"> Get pending Suit Bottom</button>
+<div *ngFor="let c of customersData9"> {{c.uploadStyle}} {{c.uploadBrand}}
+
+    <button id= "approve" (click) = "editUserSuitBottom(c.pkSuitBottom)" >Approve</button>
+</div>
+
+<hr/>
+
+<form id  = "addstuff" #AddForm10 = "ngForm" (ngSubmit) = "addTankTop(AddForm10.value)">
+
+
+    <input type="text" name = "UploadStyle" ngModel placeholder="Tank Top Style" />
+    <input type="text" name = "UploadBrand" ngModel placeholder="Tank Top Brand" />
+
+<select name = "UploadSize"  ngModel> 
+    <option value="1"> Small </option>
+    <option value="2"> Medium </option>
+    <option value="3"> Large </option>
+</select>
+<select name = "UploadCondition"  ngModel> 
+    <option value="1"> New</option>
+    <option value="2"> Good</option>
+    <option value="3"> Fair</option>
+    <option value="4"> Recyclable</option>
+    
+</select>
+
+<button type="submit"> Add Tank Top</button>
+</form> 
+<button id = "approve" (click)="getAllUserTankTop()"> Get pending Tanktop</button>
+<div *ngFor="let b of customersData10"> {{b.styleName}} {{b.brandName}}
+    <button id= "approve" (click) = "editUserTankTop(b.pkTankTopId)" >Approve</button>
+</div>
+<hr/>
+
+<form id  = "addstuff" #AddForm11 = "ngForm" (ngSubmit) = "addShorts(AddForm11.value)">
+
+
+    <input type="text" name = "UploadStyle" ngModel placeholder="Shorts Style" />
+    <input type="text" name = "UploadBrand" ngModel placeholder="Shorts Brand" />
+
+<select name = "UploadSize"  ngModel> 
+    <option value="1"> Small </option>
+    <option value="2"> Medium </option>
+    <option value="3"> Large </option>
+</select>
+<select name = "UploadCondition"  ngModel> 
+    <option value="1"> New</option>
+    <option value="2"> Good</option>
+    <option value="3"> Fair</option>
+    <option value="4"> Recyclable</option>
+    
+</select>
+
+<button type="submit"> Add Shorts</button>
+</form> 
+<button id = "approve" (click)="getAllUserShorts()"> Get pending Shorts</button>
+<div *ngFor="let b of customersData11"> {{b.Style}} {{b.uploadBrand}}
+    <button id= "approve" (click) = "editUserShorts(b.pkShortsId)" >Approve</button>
+</div>
+<hr/>
+<hr/>
+
+<app-footer id="footer"></app-footer>
+
+
+
+</body>
+

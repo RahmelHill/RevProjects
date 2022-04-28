@@ -1,0 +1,27 @@
+ORDER OF PRIORITY 
+
+1.getting project done by monday
+
+
+
+2A.NAVBAR making hyperlinks work.
+
+2B..populate Database  CONSTRAINTS
+
+3.filter Functionality CONSTRAINTS
+
+4.Search functionality 
+
+5.Pages
+
+6.Customer upload
+	-address
+	-name
+	-last name
+	-number 
+	-image
+	-other details for table in drop down menu
+
+7.About/buisness plan
+
+8. power point 
